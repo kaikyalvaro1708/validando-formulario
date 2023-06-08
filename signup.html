@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Inclusão da biblioteca de ícones FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Inclusão do arquivo CSS de estilos para a página de cadastro -->
+    <link rel="stylesheet" href="./style/signup.css" />
+
+    <script src="./js/signup.js" defer></script>
+    <title>Signup</title>
+  </head>
+
+  <body>
+    <form action="">
+      <div class="container">
+        <div class="card">
+          <h1>Cadastrar</h1>
+
+          <!-- Divs para exibir mensagens de erro e sucesso -->
+          <div id="msgError"></div>
+          <div id="msgSuccess"></div>
+
+          <!-- Campos de input para o nome -->
+          <div class="label-float">
+            <input type="text" id="nome" placeholder=" " required />
+            <label id="labelNome" for="nome">Nome</label>
+          </div>
+
+          <!-- Campos de input para o usuário -->
+          <div class="label-float">
+            <input type="text" id="usuario" placeholder="" required />
+            <label id="labelUsuario" for="usuario">Usuário</label>
+          </div>
+
+          <!-- campos de input para o email -->
+          <div class="label-float">
+            <input type="email" id="email" placeholder="" required>
+            <label id="labelEmail" for="email">Email</label>
+          </div>
+
+          <!-- Campos de input para o  número de telefone-->
+          <div class="label-float">
+            <input type="text" id="telefone" placeholder="" pattern="(\d{2})\d{5}\.\d{4}" required>
+            <label id="labelNamber" for="number">Telefone</label>
+          </div>
+
+          <!-- Campos de input para a senha -->
+          <div class="label-float">
+            <input type="password" id="senha" placeholder=" " minlength="3" maxlength="14" required />
+            <label id="labelSenha" for="senha">Senha</label>
+            <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i> <!-- Ícone para mostrar/ocultar a senha -->
+          </div>
+
+          <!-- Campos de input para confirmar a senha -->
+          <div class="label-float">
+            <input type="password" id="confirmSenha" placeholder=" " minlength="3" maxlength="14" required />
+            <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+            <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i> <!-- Ícone para mostrar/ocultar a senha -->
+          </div>
+
+          <!-- Botão para cadastrar -->
+          <div class="justify-center">
+            <button onclick="cadastrar()">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
